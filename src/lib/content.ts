@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
     images: [
       "/projects/sgp/login.png",
       "/projects/sgp/dependencias.png",
-      "/projects/sgp/modulos.png",
+      "/projects/sgp/liquidaciones.png",
     ],
     es: {
       title: "Gestión de Personal",
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     index: "03",
     tags: ["Flask", "PostgreSQL", "React", "JasperReports"],
     images: [
-      "/projects/recibos/listado.png",
+      "/projects/recibos/listado-v2.png",
       "/projects/recibos/detalle-v2.png",
       "/projects/recibos/dashboard-v2.png",
     ],
