@@ -22,7 +22,7 @@ export default function Experience() {
         {t.expTitle}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-10 pt-8 border-t-2 border-white/[0.14]">
-        <div className="font-mono text-base text-white/55 flex flex-col gap-4">
+        <div className="font-mono text-base text-white/55 flex flex-col justify-center gap-4">
           <span>{t.expPeriod}</span>
           <Image
             src="/logos/avellaneda.png"
