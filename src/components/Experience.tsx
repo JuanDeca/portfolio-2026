@@ -29,7 +29,7 @@ export default function Experience() {
             alt="Municipalidad de Avellaneda"
             width={851}
             height={293}
-            className="w-32 h-auto opacity-90"
+            className="w-32 h-auto opacity-90 mx-auto"
           />
         </div>
         <div>
