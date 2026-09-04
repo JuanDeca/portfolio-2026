@@ -117,7 +117,7 @@ export const PROJECTS: Project[] = [
     tags: ["Flask", "PostgreSQL", "React", "Redis/RQ"],
     images: [
       "/projects/sgp/login.png",
-      "/projects/sgp/dependencias.png",
+      "/projects/sgp/modulos.png",
       "/projects/sgp/liquidaciones.png",
     ],
     es: {
