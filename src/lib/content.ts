@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
     images: [
       "/projects/sgp/login.png",
       "/projects/sgp/modulos.png",
-      "/projects/sgp/liquidaciones.png",
+      "/projects/sgp/liquidaciones-v2.png",
     ],
     es: {
       title: "Gestión de Personal",
