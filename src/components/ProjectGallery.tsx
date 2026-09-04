@@ -2,24 +2,42 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { SiGithub } from "react-icons/si";
 import { track } from "@vercel/analytics";
 import { ACCENT } from "@/lib/content";
+
+function GithubBadge({ url, project }: { url: string; project: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Ver repositorio en GitHub"
+      onClick={() => track("project_github_click", { project })}
+      className="absolute top-3 right-3 z-20 flex items-center justify-center w-9 h-9 rounded-full bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black cursor-pointer"
+    >
+      <SiGithub size={18} />
+    </a>
+  );
+}
 
 export default function ProjectGallery({
   images,
   alt,
   placeholderNote,
+  githubUrl,
 }: {
   images: string[];
   alt: string;
   placeholderNote: string;
+  githubUrl?: string;
 }) {
   const [index, setIndex] = useState(0);
 
   if (images.length === 0) {
     return (
       <div
-        className="relative flex items-center justify-center border-b border-white/[0.14]"
+        className="relative flex items-center justify-center border-b border-white/[0.14] group"
         style={{
           aspectRatio: "1916 / 872",
           backgroundImage:
@@ -29,6 +47,7 @@ export default function ProjectGallery({
         <span className="font-mono text-xs text-white/35 tracking-wide">
           {placeholderNote}
         </span>
+        {githubUrl && <GithubBadge url={githubUrl} project={alt} />}
       </div>
     );
   }
@@ -45,6 +64,7 @@ export default function ProjectGallery({
         sizes="100vw"
         className="object-cover object-top"
       />
+      {githubUrl && <GithubBadge url={githubUrl} project={alt} />}
       {images.length > 1 && (
         <>
           <button

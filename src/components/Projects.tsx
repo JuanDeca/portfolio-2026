@@ -30,6 +30,7 @@ export default function Projects() {
                 images={pr.images}
                 alt={content.title}
                 placeholderNote={t.placeholderNote}
+                githubUrl={pr.githubUrl}
               />
               <div className="p-8 sm:p-10">
                 <div

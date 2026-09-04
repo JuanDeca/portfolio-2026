@@ -88,6 +88,7 @@ export type Project = {
   index: string;
   tags: string[];
   images: string[];
+  githubUrl?: string;
   es: { title: string; desc: string };
   en: { title: string; desc: string };
 };
@@ -102,6 +103,7 @@ export const PROJECTS: Project[] = [
       "/projects/rag/documento.png",
       "/projects/rag/corpus.png",
     ],
+    githubUrl: "https://github.com/JuanDeca/rag-avellaneda",
     es: {
       title: "RAG Municipal",
       desc: "Asistente conversacional (RAG) sobre trámites y normativa municipal, que indexa 210 documentos oficiales (ordenanzas y trámites) en PostgreSQL con pgvector. Cada respuesta cita la fuente exacta por fragmento, con un visor de PDF que resalta el pasaje usado, y un chequeo previo por LLM que evita responder cuando el contexto no alcanza.",
