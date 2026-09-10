@@ -12,7 +12,10 @@ export const CONTACT = {
   linkedinUrl: "https://www.linkedin.com/in/juan-decastelli/",
 };
 
-export const CV_URL = "/cv/Juan-Decastelli-CV-v2.pdf";
+export const CV_URL: Record<Lang, string> = {
+  es: "/cv/Juan-Decastelli-CV-v2.pdf",
+  en: "/cv/Juan-Decastelli-CV-EN.pdf",
+};
 
 export const TECH_LIST = [
   { name: "React", category: "FRONTEND" },

@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/language-context";
 import { ACCENT, CONTACT, CV_URL } from "@/lib/content";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section
@@ -49,9 +49,9 @@ export default function Contact() {
 
       <div className="flex flex-wrap gap-4 mt-12">
         <a
-          href={CV_URL}
+          href={CV_URL[lang]}
           download
-          onClick={() => track("download_cv")}
+          onClick={() => track("download_cv", { lang })}
           className="no-underline font-bold text-sm px-6 py-3.5 inline-flex items-center gap-2.5 bg-[#0a0a0a] text-[#f3f2ef]"
         >
           ↓ {t.downloadCv}
