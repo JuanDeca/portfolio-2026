@@ -12,7 +12,7 @@ export const CONTACT = {
   linkedinUrl: "https://www.linkedin.com/in/juan-decastelli/",
 };
 
-export const CV_URL = "/cv/Juan-Decastelli-CV.pdf";
+export const CV_URL = "/cv/Juan-Decastelli-CV-v2.pdf";
 
 export const TECH_LIST = [
   { name: "React", category: "FRONTEND" },
@@ -106,11 +106,11 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/JuanDeca/rag-avellaneda",
     es: {
       title: "RAG Municipal",
-      desc: "Asistente conversacional (RAG) sobre trámites y normativa municipal, que indexa 210 documentos oficiales (ordenanzas y trámites) en PostgreSQL con pgvector. Cada respuesta cita la fuente exacta por fragmento, con un visor de PDF que resalta el pasaje usado, y un chequeo previo por LLM que evita responder cuando el contexto no alcanza.",
+      desc: "Asistente conversacional (RAG) sobre trámites y normativa municipal, con 3 pipelines de chunking especializados según la estructura real de cada tipo de documento (trámites, artículos de ordenanza, tablas de anexo) sobre un corpus de 43 documentos oficiales indexado en PostgreSQL con pgvector. Antes de generar, un chequeo explícito por LLM decide si el contexto recuperado alcanza para responder, y cada cita se reconstruye por código —no por el modelo— para no arriesgar el dato exacto. Evaluado cuantitativamente con RAGAS (0.73 de fidelidad al contexto, 0.77 de relevancia), con visor de PDF que resalta el pasaje usado y un browser del corpus completo.",
     },
     en: {
       title: "Municipal RAG",
-      desc: "Conversational RAG assistant over municipal procedures and regulations, indexing 210 official documents (ordinances and procedures) in PostgreSQL with pgvector. Every answer cites the exact source fragment, with a PDF viewer that highlights the passage used, and an LLM-based check that avoids answering when the retrieved context falls short.",
+      desc: "Conversational RAG assistant over municipal procedures and regulations, with 3 specialized chunking pipelines matched to each document type's real structure (procedures, ordinance articles, appendix tables) over a corpus of 43 official documents indexed in PostgreSQL with pgvector. Before generating, an explicit LLM check decides whether the retrieved context is actually sufficient to answer, and every citation is reconstructed by code — not by the model — to avoid risking the exact data. Quantitatively evaluated with RAGAS (0.73 faithfulness, 0.77 relevancy), with a PDF viewer that highlights the exact passage used and a full corpus browser.",
     },
   },
   {
