@@ -23,7 +23,7 @@ export const TECH_LIST = [
   { name: "TypeScript", category: "FRONTEND" },
   { name: "Python", category: "BACKEND" },
   { name: "FastAPI", category: "BACKEND" },
-  { name: "Django", category: "BACKEND" },
+  { name: "Flask", category: "BACKEND" },
   { name: "PostgreSQL", category: "DATA" },
   { name: "Docker", category: "TOOLS" },
   { name: "Git", category: "TOOLS" },
